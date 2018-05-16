@@ -34,9 +34,15 @@ public class Main {
 		
 		list2.printAllNodes();
 		
-		list2.removeAll("John");
+		//list2.removeAll("John");
 		
-
+		int[] numbers = {1,2,3,2,2,4,5,5,7,8,4,4,1,0,10};
+		
+		ArrayAlgorithm array = new ArrayAlgorithm(numbers);
+		System.out.println(array);
 	}
+	
+	
+	
 
 }
