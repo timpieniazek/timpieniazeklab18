@@ -31,7 +31,7 @@ public class ArrayAlgorithm {
 	}
 
 	public int[] occurrences() {
-		occurances = new int[max() + 1];
+		occurances = new int[max() + 1]; 
 
 		for (int num : numbers) {
 

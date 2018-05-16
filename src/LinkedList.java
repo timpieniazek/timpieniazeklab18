@@ -52,21 +52,13 @@ public class LinkedList {
 
 	public void removeAll(Object o) {
 		Node curr = head;
- 		while (curr.next != null) {
-			while (curr.next.value.equals(o)) {
-				if (curr.next.next == null) {
-					curr.next = null;
-					count--;
-					break;
-					// curr.next.value = null;
-				} else {
-					curr.next = curr.next.next;
-				}
+		while (curr.next != null) {
+			if (curr.next.value == o) {
+				curr.next = curr.next.next;
 				count--;
+			} else {
+				curr = curr.next;
 			}
-
-			curr = curr.next;
-
 		}
 	}
 
@@ -83,29 +75,29 @@ public class LinkedList {
 		return true;
 	}
 
-	
 	public void printReverse() {
-		Node current = head;
-		
-		for (int i = 0; i < count; i++) {
-			addAtStart(head.next);
+		Node curr = head;
+		int c = count;
+		while (c > 0) {
+			for (int i = 0; i < c; i++) {
+				curr = curr.next;
+			}
+			System.out.println(curr.value);
+			c--;
+			curr = head;
 		}
-		printAllNodes();
-		
-		head = current;
-
 	}
 
 	public boolean insertAt(int index, Object o) {
 		if (index < 0 || index > count) {
 			return false;
 		}
-		
+
 		if (index == 0) {
 			addAtStart(o);
 			return true;
 		}
-		
+
 		Node newNode = new Node();
 		newNode.value = o;
 		Node curr = head;

@@ -17,13 +17,13 @@ public class Main {
 		list2.addAtStart("Jonah");
 		list2.addAtStart("Vicki");
 		
-		list2.printAllNodes();
+		//list2.printAllNodes();
 		
 		System.out.println();
 		
 		list2.removeAt(11);
 		
-		list2.printAllNodes();
+		//list2.printAllNodes();
 		
 		System.out.println();
 		
@@ -34,10 +34,13 @@ public class Main {
 		
 		list2.printAllNodes();
 		
-		//list2.removeAll("John");
+		list2.removeAll("Jonah");
 		
-		//System.out.println("REVERSE PRINT");
-		//list2.printReverse();
+		System.out.println();
+		list2.printAllNodes();
+		
+		System.out.println("REVERSE PRINT");
+		list2.printReverse();
 		
 		int[] numbers = {1,2,3,2,2,4,5,5,7,8,4,4,1,0,10};
 		
