@@ -83,7 +83,16 @@ public class LinkedList {
 		return true;
 	}
 
+	
 	public void printReverse() {
+		Node current = head;
+		
+		for (int i = 0; i < count; i++) {
+			addAtStart(head.next);
+		}
+		printAllNodes();
+		
+		head = current;
 
 	}
 

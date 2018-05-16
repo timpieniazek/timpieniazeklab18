@@ -15,7 +15,7 @@ public class ArrayAlgorithm {
 		super();
 		this.numbers = numbers;
 		occurances = occurrences();
-		output = "ArrayAlgorithm:\n";
+		output = "ArrayAlgorithm [occurences={";
 	}
 
 	public int max() {
@@ -41,12 +41,20 @@ public class ArrayAlgorithm {
 		return occurances;
 	}
 
+	
+	
 	@Override
 	public String toString() {
+		return "ArrayAlgorithm [occurances=" + Arrays.toString(occurances) + "]";
+	}
+
+	
+	public String toString22() {
 
 		for (int i = 0; i < occurances.length; i++) {
-			output += ("[" + i + "]: " + Integer.toString(occurances[i]) + "\n");
+			output += (" " + i + "=" + Integer.toString(occurances[i]) + " ");
 		}
+		output += "}]";
 		return output;
 	}
 

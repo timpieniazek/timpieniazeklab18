@@ -36,10 +36,18 @@ public class Main {
 		
 		//list2.removeAll("John");
 		
+		//System.out.println("REVERSE PRINT");
+		//list2.printReverse();
+		
 		int[] numbers = {1,2,3,2,2,4,5,5,7,8,4,4,1,0,10};
 		
 		ArrayAlgorithm array = new ArrayAlgorithm(numbers);
-		System.out.println(array);
+		System.out.println(array.toString22());
+		
+		System.out.println();
+		
+		HashMapAlgorithm hashMap = new HashMapAlgorithm(numbers);
+		System.out.println(hashMap);
 	}
 	
 	
